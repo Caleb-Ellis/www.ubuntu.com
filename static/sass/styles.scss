@@ -42,7 +42,7 @@
 @import 'pattern_table';
 @import 'pattern_tabs';
 @import 'pattern_feedback';
-@import 'takeovers/1804-release';
+@import 'takeovers/private_cloud_economics';
 
 @include ubuntu-p-buttons;
 @include ubuntu-p-navigation;
@@ -70,7 +70,7 @@
 @include ubuntu-p-tables;
 @include ubuntu-p-tabs;
 @include ubuntu-p-feedback;
-@include p-takeover-1804-release;
+@include p-takeover-private-cloud-economics;
 
 // Bug fixes
 // Each of the the rules below are bug fixes which need to be addressed further upstream
