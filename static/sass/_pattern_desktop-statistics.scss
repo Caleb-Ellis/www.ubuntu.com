@@ -1,0 +1,71 @@
+@mixin ubuntu-p-desktop-statistics {
+  .p-sticky-nav {
+    background-color: $color-light;
+    border-bottom: 1px solid $color-mid-light;
+    box-shadow: 0 3px 5px -1px rgba(17, 17, 17, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    .p-tabs__link:hover::before {
+      background-color: $color-brand;
+    }
+
+    .p-tabs__link.is-selected {
+      @include vf-highlight-bar($color-brand, bottom, true);
+    }
+  
+    .p-tabs__list {
+      margin-bottom: 0;
+      overflow: auto;
+  
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .p-bar-chart {
+    .p-bar-chart__bar {
+      fill: $color-brand;
+      opacity: .8;
+      
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .tick {
+      text {
+        font-size: .625rem;
+      }
+    }
+  }
+
+  .p-pie-chart {
+    .p-pie-chart__wedge {
+      path {
+        opacity: .8;
+  
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .p-mobile-flex-col {
+    @media only screen and (max-width: $breakpoint-medium) {
+      display: flex;
+      flex-direction: column;
+
+      & > [class*="col-"]:first-child {
+        order: 1;
+      }
+
+      & > [class*="col-"]:nth-child(2) {
+        order: 0;
+      }
+    }
+  }
+}
